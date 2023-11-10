@@ -60,7 +60,6 @@ namespace ConsoleApp1.Models
 
 		public static User Parse(ReadOnlySpan<char> s, IFormatProvider? provider = null)
 		{
-
 				Span<Range> dest = stackalloc Range[5];
 				s.Split(dest, ',');
 				var id = int.Parse(s[dest[0]]);

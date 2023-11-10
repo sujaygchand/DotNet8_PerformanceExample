@@ -14,9 +14,9 @@ namespace ConsoleApp1.Services
 
         public User TryGetUser()
         {
-            var isValid = User.TryParse(UserJsonData, null, out User user);
+            User.TryParse(UserJsonData, null, out User user);
 
-            return isValid ? user : null;
+            return user;
         }
 
         public User GetUserAsSpan()
@@ -26,9 +26,9 @@ namespace ConsoleApp1.Services
 
         public User TryGetUserAsSpan()
         {
-            var isValid = User.TryParse(UserJsonData.AsSpan(), null, out User user);
+            User.TryParse(UserJsonData.AsSpan(), null, out User user);
 
-            return isValid ? user : null;
+            return user;
         }
     }
 }
